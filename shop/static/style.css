@@ -35,7 +35,21 @@ nav .onglets input{
   outline:none;
 }
 /* Fin de la barre de navigation */
+/* affichage de chaque produit */
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  margin-right: 20px;
+  cursor:pointer;
+}
 
+.card img{
+  width: 100px;
+}
+
+.card.card-body p{
+  margin-top: -10px;
+}
 /* Header */
 header{
   display: flex;
