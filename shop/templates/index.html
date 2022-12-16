@@ -24,14 +24,13 @@
 
    <header>
      <h1>Découvrez nos meilleurs articles !</h1>
-     <button>Naviguer <i class="fas fa-paper-plane"></i></button>
    </header>
 
     {% for product in products %}
 
 <!--        <section class="main">-->
 <div class="card">
-            <p><img src={{ product.image.url }} alt="{{ product.name }}" style="width:50%"></p>
+            <p><img src={{ product.image.url }} alt="{{ product.name }}" style="width:10%"></p>
     <div class="card-body">
         <h2>{{ product.name }}</h2>
         <p>{{ product.price }}€</p>
