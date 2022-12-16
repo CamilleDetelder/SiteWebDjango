@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- importer le fichier de style -->
+    <link rel="stylesheet"  href="{% static 'style_detail.css' %}" media="screen" type="text/css" />
+</head>
+
+<body>
+
+    <h2 style="text-align:center">Produit</h2>
+
+    <div class="card">
+        <img src={{ product.image.url }} alt="{{ product.name }}" style="width:50%">
+        <h1>{{ product.name }}</h1>
+        <p class="price">€ {{ product.price }}</p>
+        <p>{{ product.description }}</p>
+        <button >Ajouter au panier</button>
+<!--        <button onclick="location.href={% url 'index' %} >Ajouter au panier</button>-->
+    </div>
+
+</body>
+
+</html>

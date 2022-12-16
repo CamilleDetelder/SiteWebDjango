@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+# étendue de base.html
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'style.css' %}" media="screen" type="text/css" />
+<!-- Barre de navigation -->
+  <nav>
+    <h1>Notre Site Web avec Django </h1>
+    <div class="onglets">
+
+      <p class="link">Homme</p>
+      <p class="link">Femme</p>
+      <p class="link">Enfant</p>
+
+      <form>
+        <input type="search" placeholder="Rechercher">
+      </form>
+
+      <p><i class="far fa-heart"></i></p>
+      <button><i class="fas fa-shopping-cart"></i> Panier</button>
+    </div>
+  </nav>
+
+   <header>
+     <h1>Bienvenue sur notre site web !</h1>
+     <button>Naviguer <i class="fas fa-paper-plane"></i></button>
+   </header>
+
+    {% for product in products %}
+
+        <h1></h1>
+        <section class="main">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.price }}</p>
+            <p><img src={{ product.image.url }} alt="{{ product.name }}" style="width:50%"></p>
+        </section>
+    {% endfor %}
+
+   <footer>
+      <p>&copy; Contactez-nous au 06 98 87 82 00</p>
+      <div class="social-media">
+        <p><i class="fab fa-facebook-f"></i></p>
+        <p><i class="fab fa-twitter"></i></p>
+        <p><i class="fab fa-instagram"></i></p>
+        <p><i class="fab fa-linkedin-in"></i></p>
+      </div>
+    </footer>
+    <!-- Fin du pied de page -->
+
+
+{% endblock %}
+
